@@ -38,7 +38,7 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,8 +83,9 @@
             this.usernameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(0, 23);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(388, 27);
+            this.usernameBox.Size = new System.Drawing.Size(388, 23);
             this.usernameBox.TabIndex = 1;
+            this.usernameBox.Leave += new System.EventHandler(this.usernameBox_Leave);
             // 
             // usernameLabel
             // 
@@ -92,7 +93,7 @@
             this.usernameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.Location = new System.Drawing.Point(-4, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(91, 19);
+            this.usernameLabel.Size = new System.Drawing.Size(76, 17);
             this.usernameLabel.TabIndex = 0;
             this.usernameLabel.Text = "Username";
             // 
@@ -109,7 +110,7 @@
             // 
             this.passwordBox.Location = new System.Drawing.Point(0, 23);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(389, 27);
+            this.passwordBox.Size = new System.Drawing.Size(389, 23);
             this.passwordBox.TabIndex = 1;
             this.passwordBox.UseSystemPasswordChar = true;
             // 
@@ -119,14 +120,14 @@
             this.passwordLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(-4, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(87, 19);
+            this.passwordLabel.Size = new System.Drawing.Size(70, 17);
             this.passwordLabel.TabIndex = 0;
             this.passwordLabel.Text = "Password";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.loginBtn);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.exitBtn);
             this.panel3.Location = new System.Drawing.Point(79, 270);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(388, 34);
@@ -145,21 +146,23 @@
             this.loginBtn.TabIndex = 0;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // button1
+            // exitBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.exitBtn.BackColor = System.Drawing.Color.White;
+            this.exitBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(0, 0);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(147, 34);
+            this.exitBtn.TabIndex = 0;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 334);
             this.ControlBox = false;
@@ -196,7 +199,7 @@
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
 
