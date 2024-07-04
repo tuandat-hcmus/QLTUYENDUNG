@@ -386,3 +386,19 @@ INSERT INTO BANGCAP (ID, Ten, NgayHetHan, NgayNop, IDHoSo) VALUES
 
 ('BC019', N'Chứng chỉ Java Programmer', '2027-12-31', '2023-10-01', 'HS010'),
 ('BC020', N'Bằng Cử nhân Khoa học dữ liệu', '2024-06-30', '2024-04-01', 'HS010');
+
+UPDATE NHANVIEN
+SET ChucDanh = N'Ban lãnh đạo', PhongBan = N'Phòng Pháp lý'
+Where IDNV = 'NV010'
+
+INSERT INTO  ACCOUNT VALUES 
+('NV001', '123', 'NVDT', 'NV001'),
+('NV002', '123', 'NVTT', 'NV002'),
+('NV003', '123', 'NVTD', 'NV003'),
+('NV004', '123', 'NVPL', 'NV004'),
+('NV005', '123', 'NVDT', 'NV005'),
+('NV006', '123', 'NVTT', 'NV006'),
+('NV007', '123', 'NVTD', 'NV007'),
+('NV008', '123', 'NVPL', 'NV008'),
+('NV009', '123', 'NVDT', 'NV009'),
+('NV010', '123', 'BLD', 'NV010')
