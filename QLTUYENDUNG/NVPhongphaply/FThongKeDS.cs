@@ -17,6 +17,7 @@ namespace QLTUYENDUNG.NVPhongphaply
         {
             InitializeComponent();
             comboBoxNgay.SelectedIndex = 0;
+            comboBoxTT.SelectedIndex = 0;
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
@@ -31,18 +32,39 @@ namespace QLTUYENDUNG.NVPhongphaply
                 case 2: 
                     ngay = 14;
                     break;
+                case 3:
+                    ngay = 100;
+                    break;
                 default:
                     ngay = 3;
                     break;
             }
-            dataGridViewDSDN.DataSource = TTDT.getTTDTHetHanDataTable(ngay);
-            if (dataGridViewDSDN.Rows.Count > 0) btnGuiDS.Enabled = true;
+            // Tình trạng thông tin đăng tuyển (đã gửi, chưa gửi, tất cả)
+            int idxTT = comboBoxTT.SelectedIndex;
+
+            dataGridViewDSDN.DataSource = TTDT.getTTDTHetHanDataTable(ngay, idxTT);
+
+            if (dataGridViewDSDN.Rows.Count > 0 && idxTT != 1) 
+                btnGuiDS.Enabled = true;
             else btnGuiDS.Enabled = false;
         }
 
         private void btnGuiDS_Click(object sender, EventArgs e)
         {
-
+            List<string> listId = new List<string>();
+            foreach (DataGridViewRow dataRow in dataGridViewDSDN.Rows)
+            {
+                listId.Add(Convert.ToString(dataRow.Cells["IDTTDT"].Value));
+            }
+            int n = TTDT.updateTinhTrangTTDT(listId);
+            if (n > 0)
+            {
+                MessageBox.Show($"{n} thông tin đã được gửi !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Lỗi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
