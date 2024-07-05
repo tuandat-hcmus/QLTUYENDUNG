@@ -54,11 +54,41 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lanhdao\LanhDaoHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lanhdao\LanhDaoHome.Designer.cs">
+      <DependentUpon>LanhDaoHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVDangtuyen\DangTuyenHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVDangtuyen\DangTuyenHome.Designer.cs">
+      <DependentUpon>DangTuyenHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVPhongphaply\PhongPhapLyHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVPhongphaply\PhongPhapLyHome.Designer.cs">
+      <DependentUpon>PhongPhapLyHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVTieptan\TiepTanHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVTieptan\TiepTanHome.Designer.cs">
+      <DependentUpon>TiepTanHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVTuyendung\TuyenDungHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVTuyendung\TuyenDungHome.Designer.cs">
+      <DependentUpon>TuyenDungHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +97,23 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lanhdao\LanhDaoHome.resx">
+      <DependentUpon>LanhDaoHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVDangtuyen\DangTuyenHome.resx">
+      <DependentUpon>DangTuyenHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVPhongphaply\PhongPhapLyHome.resx">
+      <DependentUpon>PhongPhapLyHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVTieptan\TiepTanHome.resx">
+      <DependentUpon>TiepTanHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVTuyendung\TuyenDungHome.resx">
+      <DependentUpon>TuyenDungHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

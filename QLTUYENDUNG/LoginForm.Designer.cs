@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginExitBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.usernameBox = new System.Windows.Forms.TextBox();
@@ -39,21 +38,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLTUYENDUNG.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(231, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // loginExitBtn
             // 
@@ -83,7 +73,7 @@
             this.usernameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(0, 23);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(388, 23);
+            this.usernameBox.Size = new System.Drawing.Size(388, 27);
             this.usernameBox.TabIndex = 1;
             this.usernameBox.Leave += new System.EventHandler(this.usernameBox_Leave);
             // 
@@ -93,7 +83,7 @@
             this.usernameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.Location = new System.Drawing.Point(-4, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(76, 17);
+            this.usernameLabel.Size = new System.Drawing.Size(91, 19);
             this.usernameLabel.TabIndex = 0;
             this.usernameLabel.Text = "Username";
             // 
@@ -110,7 +100,7 @@
             // 
             this.passwordBox.Location = new System.Drawing.Point(0, 23);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(389, 23);
+            this.passwordBox.Size = new System.Drawing.Size(389, 27);
             this.passwordBox.TabIndex = 1;
             this.passwordBox.UseSystemPasswordChar = true;
             // 
@@ -120,7 +110,7 @@
             this.passwordLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(-4, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(70, 17);
+            this.passwordLabel.Size = new System.Drawing.Size(87, 19);
             this.passwordLabel.TabIndex = 0;
             this.passwordLabel.Text = "Password";
             // 
@@ -160,10 +150,21 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLTUYENDUNG.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(231, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(545, 334);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
@@ -177,12 +178,12 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -11,6 +11,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLTUYENDUNG.NVTieptan;
+using QLTUYENDUNG.NVPhongphaply;
+using QLTUYENDUNG.NVDangtuyen;
+using QLTUYENDUNG.Lanhdao;
 
 namespace QLTUYENDUNG
 {
@@ -43,8 +47,32 @@ namespace QLTUYENDUNG
                 if (!String.IsNullOrEmpty(accountType))
                 {
                     this.Hide();
-                    HomePage homePage = new HomePage(username, accountType);
-                    homePage.ShowDialog();
+                    if(accountType == "NVTT")
+                    {
+                        TiepTanHome homePage = new TiepTanHome();
+                        homePage.ShowDialog();
+                    }
+                    else if (accountType == "NVPL")
+                    {
+                        PhongPhapLyHome homePage = new PhongPhapLyHome();
+                        homePage.ShowDialog();
+                    }   
+                    else if (accountType == "NVDT")
+                    {
+                        DangTuyenHome homePage = new DangTuyenHome();
+                        homePage.ShowDialog();
+                    }
+                    else if (accountType == "NVTD")
+                    {
+                        DangTuyenHome homePage = new DangTuyenHome();
+                        homePage.ShowDialog();
+                    }
+                    else if (accountType == "BLD")
+                    {
+                        LanhDaoHome homePage = new LanhDaoHome();
+                        homePage.ShowDialog();  
+                    }
+                 
                     this.Show();
                 }
             }
