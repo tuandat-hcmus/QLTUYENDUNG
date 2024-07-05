@@ -10,7 +10,7 @@ namespace QLTUYENDUNG.DAO
 {
     internal class AccountDAO
     {
-        public readonly string connectionString = "Server=DESKTOP-RQKHPSH;Database=QLTUYENDUNG;Integrated Security=True;";
+        public static readonly string connectionString = "Server=DESKTOP-RQKHPSH;Database=QLTUYENDUNG;Integrated Security=True;";
         private static AccountDAO instance = null;
 
         public static AccountDAO getInstance()
@@ -24,7 +24,7 @@ namespace QLTUYENDUNG.DAO
 
         public string GetPasswordHash(string username)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 try
                 {
@@ -49,7 +49,7 @@ namespace QLTUYENDUNG.DAO
         }
 
         public string getAccountType(string username) {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 try
                 {
