@@ -162,6 +162,29 @@ namespace QLTUYENDUNG.DAO
             return dataTable;
         }
 
+        public static int updateNgayHetHan(string idTTDT, int ngay)
+        {
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = $"UPDATE THONGTINDANGTUYEN SET NgayHetHan = DATEADD(DAY, @Ngay, NgayHetHan), TinhTrang = '' " +
+                        $"WHERE IDTTDT = @Id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Id", idTTDT);
+                    command.Parameters.AddWithValue("@Ngay", ngay);
 
+                    int rowsAffected = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsAffected;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error at TTDTDAO: updateNgayHetHan(): " + ex.Message);
+                    return -1;
+                }
+            }
+        }
     }
 }

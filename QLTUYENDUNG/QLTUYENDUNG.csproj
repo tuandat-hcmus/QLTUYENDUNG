@@ -144,6 +144,18 @@
     <Compile Include="NVPhongphaply\FGiaHanHD.Designer.cs">
       <DependentUpon>FGiaHanHD.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVPhongphaply\FInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVPhongphaply\FInput.Designer.cs">
+      <DependentUpon>FInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVPhongphaply\FLienHe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVPhongphaply\FLienHe.Designer.cs">
+      <DependentUpon>FLienHe.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVPhongphaply\FTimPPL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NVPhongphaply\FGiaHanHD.resx">
       <DependentUpon>FGiaHanHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVPhongphaply\FInput.resx">
+      <DependentUpon>FInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVPhongphaply\FLienHe.resx">
+      <DependentUpon>FLienHe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVPhongphaply\FTimPPL.resx">
       <DependentUpon>FTimPPL.cs</DependentUpon>

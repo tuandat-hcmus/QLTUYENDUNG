@@ -54,7 +54,7 @@ namespace QLTUYENDUNG.Lanhdao
             TTDT ttdt = TTDT.getTTDTHetHanbyID(id);
             if (ttdt == null)
             {
-                MessageBox.Show("Mã doanh nghiệp không hợp lệ! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã hợp đồng không hợp lệ! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -138,37 +138,13 @@ namespace QLTUYENDUNG.Lanhdao
             {
                 return;
             }
-            
         }
 
-        private void textBoxTenDN_TextChanged(object sender, EventArgs e)
+        private void textBoxMaHD_Enter(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBoxMaHD_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            btnHuy.Enabled = false;
+            btnUuDai.Enabled = false;
+            btnGuiDS.Enabled = false;
         }
     }
 }

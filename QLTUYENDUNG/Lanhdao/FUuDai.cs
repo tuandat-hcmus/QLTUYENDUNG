@@ -18,7 +18,16 @@ namespace QLTUYENDUNG.Lanhdao
         {
             InitializeComponent();
             this.selections = idUuDai;
-            loadData();
+            try
+            {
+                loadData();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error at FUuDai constructor, cannot load data: " + ex.Message);
+                MessageBox.Show("Cannot load data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
         }
 
         private void btnChon_Click(object sender, EventArgs e)

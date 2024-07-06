@@ -78,5 +78,10 @@ namespace QLTUYENDUNG.DTO
             }
             return null;
         }
+
+        public static int updateNgayHetHan(string idTTDT, int ngay)
+        {
+            return TTDTDAO.updateNgayHetHan(idTTDT, ngay);
+        }
     }
 }
