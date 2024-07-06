@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DoanhNghiepDAO.cs" />
+    <Compile Include="DTO\DoanhNghiep.cs" />
     <Compile Include="DTO\UserService.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
