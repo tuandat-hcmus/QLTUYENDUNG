@@ -1,6 +1,7 @@
 ﻿using QLTUYENDUNG.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -14,22 +15,32 @@ namespace QLTUYENDUNG.Utilities
         {
             using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
-                try
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        int rowsAffected = command.ExecuteNonQuery();
-                        connection.Close();
-                        return rowsAffected;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error at QueryHelper: ExecuteNonQuery(): " + ex.Message);
-                    return -1;
+                    int rowsAffected = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsAffected;
                 }
             }
+        }
+
+        // Dùng cho các câu query select *, không điều kiện gì thêm 
+        public static DataTable ExecuteQuery(string query)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    adapter.Fill(dataTable);
+                    connection.Close();
+                }
+            }
+            return dataTable;
         }
     }
 }

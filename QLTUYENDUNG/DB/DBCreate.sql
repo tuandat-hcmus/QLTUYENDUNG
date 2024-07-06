@@ -96,7 +96,7 @@ create table PHIEUDANGKYUNGTUYEN (
 	IDTTDT varchar(5), 
 	IDCTTTDT varchar(5), 
 	NhanVienDuyet varchar(5),
-	TinhTrang varchar(100), 
+	TinhTrang nvarchar(100), 
 	primary key (IDHoSo, IDTTDT, IDCTTTDT)
 )
 

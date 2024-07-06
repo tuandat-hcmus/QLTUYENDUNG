@@ -44,9 +44,10 @@ namespace QLTUYENDUNG.NVPhongphaply
 
             dataGridViewDSDN.DataSource = TTDT.getTTDTHetHanDataTable(ngay, idxTT);
 
-            if (dataGridViewDSDN.Rows.Count > 0 && idxTT != 1) 
+            if (dataGridViewDSDN.Rows.Count > 0 && idxTT != 1 && idxTT != 2) 
                 btnGuiDS.Enabled = true;
-            else btnGuiDS.Enabled = false;
+            else 
+                btnGuiDS.Enabled = false;
         }
 
         private void btnGuiDS_Click(object sender, EventArgs e)
@@ -65,6 +66,7 @@ namespace QLTUYENDUNG.NVPhongphaply
             {
                 MessageBox.Show("Lỗi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            btnGuiDS.Enabled = false;
         }
     }
 }

@@ -19,6 +19,8 @@ namespace QLTUYENDUNG.DTO
         public string idDoanhNghiep {  get; set; }
         public string nhanVienDuyet { get; set; }
 
+        public TTDT() { }
+
         public TTDT (string idTTDT, DateTime thoiGianDt, string hinhThucDT, DateTime ngayHetHan, string tinhTrang, string ghiChu, string idDoanhNghiep, string nhanVienDuyet)
         {
             this.idTTDT = idTTDT;
@@ -43,11 +45,13 @@ namespace QLTUYENDUNG.DTO
             this.nhanVienDuyet = dataRow["NhanVienDuyet"].ToString();
         } 
 
+        // Tìm thông tin đăng tuyển hết hạn theo số ngày còn lại
         public static DataTable getTTDTHetHanDataTable(int ngay, int tt)
         {
             return TTDTDAO.getTTDTHetHanDataTable(ngay, tt);
         }
 
+        // Tìm thông tin đăng tuyển hết han, trả về list
         public static List<TTDT> getTTDTHetHanList(int ngay, int tt) {
             DataTable dataTable = TTDTDAO.getTTDTHetHanDataTable(ngay, tt);
             List<TTDT> TTDTs = new List<TTDT>();
@@ -58,9 +62,21 @@ namespace QLTUYENDUNG.DTO
             return TTDTs;
         }
 
-        public static int updateTinhTrangTTDT(List<string> TTDTs)
+        // Cập nhật cột tình trạng chung cho nhiều thông tin đăng tuyển
+        public static int updateTinhTrangTTDT(List<string> TTDTs, int type = 0)
         {
-            return TTDTDAO.updateTinhTrangTTDT(TTDTs);
+            return TTDTDAO.updateTinhTrangTTDT(TTDTs, type);
+        }
+
+        // Lấy thông tin đăng tuyển theo IDTTDT
+        public static TTDT getTTDTHetHanbyID(string id)
+        {
+            DataTable dataTable = TTDTDAO.getTTDTHetHanDataTablebyID(id);
+            if (dataTable != null && dataTable.Rows.Count == 1)
+            {
+                return new TTDT(dataTable.Rows[0]);
+            }
+            return null;
         }
     }
 }

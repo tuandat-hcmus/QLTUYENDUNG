@@ -87,14 +87,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DoanhNghiepDAO.cs" />
+    <Compile Include="DAO\PhieuDangKyUngTuyenDAO.cs" />
     <Compile Include="DAO\TTDTDAO.cs" />
+    <Compile Include="DAO\UuDaiDAO.cs" />
+    <Compile Include="DTO\DoanhNghiep.cs" />
+    <Compile Include="DTO\PhieuDangKyUngTuyen.cs" />
     <Compile Include="DTO\TTDT.cs" />
     <Compile Include="DTO\UserService.cs" />
+    <Compile Include="DTO\UuDai.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lanhdao\FDSGiaHanBLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lanhdao\FDSGiaHanBLD.Designer.cs">
+      <DependentUpon>FDSGiaHanBLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lanhdao\FTimHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lanhdao\FTimHD.Designer.cs">
+      <DependentUpon>FTimHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lanhdao\FUuDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lanhdao\FUuDai.Designer.cs">
+      <DependentUpon>FUuDai.cs</DependentUpon>
     </Compile>
     <Compile Include="Lanhdao\LanhDaoHome.cs">
       <SubType>Form</SubType>
@@ -151,6 +175,15 @@
     <Compile Include="Utilities\StringChecker.cs" />
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lanhdao\FDSGiaHanBLD.resx">
+      <DependentUpon>FDSGiaHanBLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lanhdao\FTimHD.resx">
+      <DependentUpon>FTimHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lanhdao\FUuDai.resx">
+      <DependentUpon>FUuDai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lanhdao\LanhDaoHome.resx">
       <DependentUpon>LanhDaoHome.cs</DependentUpon>
