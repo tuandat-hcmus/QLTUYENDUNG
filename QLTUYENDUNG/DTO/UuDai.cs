@@ -37,11 +37,17 @@ namespace QLTUYENDUNG.DTO
         {
             List<string> list = new List<string>();
             DataTable dt = UuDaiDAO.getIdUuDaibyIDTTDTDataTable(id);
+            if (dt == null || dt.Rows.Count <= 0) return null;
             foreach (DataRow row in dt.Rows)
             {
                 list.Add(row["IDUuDai"].ToString());
             }
             return list;
+        }
+
+        public static DataTable getUuDaibyIDTTDDataTable(string idTTDT)
+        {
+            return UuDaiDAO.getUuDaibyIDTTDDataTable(idTTDT);
         }
 
         public static int insertCTUuDaibyIDTTDT(string idTTDT, List<string> idUuDai)

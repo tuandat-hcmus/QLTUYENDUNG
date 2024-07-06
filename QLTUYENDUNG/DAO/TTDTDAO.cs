@@ -41,6 +41,14 @@ namespace QLTUYENDUNG.DAO
                     {
                         whereOptions.Add(" TinhTrang LIKE N'Đang chờ xét duyệt' ");
                     }
+                    else if (tt == 2)
+                    {
+                        // tất cả hợp đồng
+                    }
+                    else if (tt == 3)
+                    {
+                        whereOptions.Add(" TinhTrang LIKE N'Đã xét duyệt' ");
+                    }
 
                     if (whereOptions.Count > 0)
                     {
@@ -103,7 +111,7 @@ namespace QLTUYENDUNG.DAO
             }
         }
 
-        public static DataTable getTTDTHetHanDataTablebyID(string id)
+        public static DataTable getTTDTHetHanDataTablebyID(string id, int type)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
@@ -111,7 +119,21 @@ namespace QLTUYENDUNG.DAO
                 try
                 {
                     connection.Open();
-                    string query = "SELECT * FROM THONGTINDANGTUYEN WHERE IDTTDT = @ID AND TinhTrang LIKE N'Đang chờ xét duyệt' ";
+                    string query = "SELECT * FROM THONGTINDANGTUYEN WHERE IDTTDT = @ID ";
+                    string status = "";
+                    switch (type)
+                    {
+                        case 0:
+                            status = "N'Đang chờ xét duyệt'";
+                            break;
+                        case 1:
+                            status = "N'Đã xét duyệt'";
+                            break;
+                        default:
+                            status = "N'Đang chờ xét duyệt'";
+                            break;
+                    }
+                    query += $" AND TinhTrang LIKE {status} AND NgayHetHan > GETDATE() ";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@ID", id);

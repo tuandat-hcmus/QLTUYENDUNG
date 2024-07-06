@@ -134,5 +134,33 @@ namespace QLTUYENDUNG.DAO
                 }
             }
         }
+
+        public static DataTable getUuDaibyIDTTDDataTable(string id)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT UUDAI.IDUuDai, Mota, Ten FROM UUDAI JOIN CTUUDAI ON UUDAI.IDUuDai = CTUUDAI.IDUuDai " +
+                        "WHERE IDTTDT = @ID ";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@ID", id);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                        connection.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error at UuDaiDAO: getUuDaibyIDTTDT(): " + ex.Message);
+                    return null;
+                }
+            }
+            return dataTable;
+        }
     }
 }

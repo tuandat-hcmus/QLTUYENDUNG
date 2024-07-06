@@ -16,12 +16,13 @@ namespace QLTUYENDUNG.Lanhdao
     {
         private List<string> idUuDai { get; set; }
         private List<string> tempIdUuDai { get; set;}
+        private bool isTextBoxMaHDLeaveHandled = false;
         public FDSGiaHanBLD()
         {
             InitializeComponent();
         }
 
-        private void textBoxMaHD_Leave(object sender, EventArgs e)
+        private async void textBoxMaHD_Leave(object sender, EventArgs e)
         {
             string maHD = textBoxMaHD.Text;
             if (string.IsNullOrEmpty(maHD)) return;
@@ -32,7 +33,10 @@ namespace QLTUYENDUNG.Lanhdao
                 return;
             }
 
-            getTTDT(maHD);
+            if (!await Task.Run(() => getTTDT(maHD)))
+            {
+                btnHuy_Click(sender, e);
+            }
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -45,13 +49,13 @@ namespace QLTUYENDUNG.Lanhdao
             }
         }
 
-        private void getTTDT(string id)
+        private bool getTTDT(string id)
         {
             TTDT ttdt = TTDT.getTTDTHetHanbyID(id);
             if (ttdt == null)
             {
                 MessageBox.Show("Mã doanh nghiệp không hợp lệ! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             textBoxMaHD.Text = ttdt.idTTDT;
@@ -73,6 +77,8 @@ namespace QLTUYENDUNG.Lanhdao
             btnHuy.Enabled = true;
             btnUuDai.Enabled = true;
             btnGuiDS.Enabled = true;
+
+            return true;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -133,6 +139,36 @@ namespace QLTUYENDUNG.Lanhdao
                 return;
             }
             
+        }
+
+        private void textBoxTenDN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMaHD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

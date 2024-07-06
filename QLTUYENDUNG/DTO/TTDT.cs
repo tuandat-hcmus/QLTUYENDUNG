@@ -69,9 +69,9 @@ namespace QLTUYENDUNG.DTO
         }
 
         // Lấy thông tin đăng tuyển theo IDTTDT
-        public static TTDT getTTDTHetHanbyID(string id)
+        public static TTDT getTTDTHetHanbyID(string id, int type = 0)
         {
-            DataTable dataTable = TTDTDAO.getTTDTHetHanDataTablebyID(id);
+            DataTable dataTable = TTDTDAO.getTTDTHetHanDataTablebyID(id, type);
             if (dataTable != null && dataTable.Rows.Count == 1)
             {
                 return new TTDT(dataTable.Rows[0]);
