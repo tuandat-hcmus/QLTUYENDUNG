@@ -1,16 +1,11 @@
 ﻿using QLTUYENDUNG.DAO;
 using QLTUYENDUNG.Util;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLTUYENDUNG.DTO
 {
     internal class UserService
     {
-        private static bool isLogedIn = false;
+        private static bool isLoggedIn = false;
 
         public static bool login(string username, string password)
         {
@@ -20,7 +15,7 @@ namespace QLTUYENDUNG.DTO
                 return false;
             }
             if(PasswordHasher.VerifyPassword(password, storedHash, username)) {
-                isLogedIn = true;
+                isLoggedIn = true;
                 return true;
             }
             return false;
@@ -28,7 +23,7 @@ namespace QLTUYENDUNG.DTO
 
         public static string getAccountType(string username)
         {
-            if (isLogedIn) {
+            if (isLoggedIn) {
                 return AccountDAO.getInstance().getAccountType(username);
             }
             return null;

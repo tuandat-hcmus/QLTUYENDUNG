@@ -210,6 +210,51 @@ INSERT INTO DOANHNGHIEP (IDDoanhNghiep, Ten, Email, DiaChi, TaxID) VALUES
 ('DN009', N'Công ty PAS', 'pas@example.com', N'Kiên Giang', '999000111'),
 ('DN010', N'Công ty DFG', 'dfg@example.com', N'Lào Cai', '222333444');
 
+
+ALTER TABLE DOANHNGHIEP
+ADD NguoiDaiDien nvarchar(255);
+
+-- Update existing records to include representative information
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Nguyen Van A'
+WHERE IDDoanhNghiep = 'DN001';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Tran Thi B'
+WHERE IDDoanhNghiep = 'DN002';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Le Van C'
+WHERE IDDoanhNghiep = 'DN003';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Pham Thi D'
+WHERE IDDoanhNghiep = 'DN004';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Nguyen Thi E'
+WHERE IDDoanhNghiep = 'DN005';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Tran Van F'
+WHERE IDDoanhNghiep = 'DN006';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Le Thi G'
+WHERE IDDoanhNghiep = 'DN007';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Pham Van H'
+WHERE IDDoanhNghiep = 'DN008';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Nguyen Thi I'
+WHERE IDDoanhNghiep = 'DN009';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Tran Van J'
+WHERE IDDoanhNghiep = 'DN010';
+
 -- Insert dữ liệu vào bảng NHANVIEN
 INSERT INTO NHANVIEN (IDNV, Ten, NgaySinh, DT, DiaChi, ChucDanh, PhongBan, Luong, GioiTinh)
 VALUES

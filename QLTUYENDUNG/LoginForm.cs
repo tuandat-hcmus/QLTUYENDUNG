@@ -95,5 +95,10 @@ namespace QLTUYENDUNG
                 usernameBox.Select();
             }
         }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
