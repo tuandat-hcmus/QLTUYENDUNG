@@ -98,16 +98,16 @@ namespace QLTUYENDUNG.NVTieptan
 
         private void LoadData()
         {
-            string connectionString = "Data Source=desktop-sa0fl96;Initial Catalog=QLTUYENDUNG;Integrated Security=True";
+            string connectionString = AccountDAO.connectionString;
             string query = "SELECT IDDoanhNghiep, Ten, Email, DiaChi, TaxID, NguoiDaiDien FROM DOANHNGHIEP";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     try
                     {
-                        con.Open();
+                        connection.Open();
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
@@ -152,7 +152,7 @@ namespace QLTUYENDUNG.NVTieptan
             }
             else
             {
-                dataGridViewDN.DataSource = null; // Clear previous data if no results found
+                dataGridViewDN.DataSource = null; 
                 MessageBox.Show("Không tìm thấy doanh nghiệp có mã số này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

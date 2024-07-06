@@ -32,11 +32,12 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.txtSearchIDDN = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnSeachDN = new System.Windows.Forms.Button();
             this.btnListDn = new System.Windows.Forms.Button();
             this.dataGridViewDN = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDangkyDN = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRepresentative = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCompany = new System.Windows.Forms.TextBox();
             this.NVTT = new System.Windows.Forms.TabControl();
-            this.btnDangkyDN = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDN)).BeginInit();
@@ -91,7 +91,7 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.txtSearchIDDN);
-            this.groupBox8.Controls.Add(this.btnTimKiem);
+            this.groupBox8.Controls.Add(this.btnSeachDN);
             this.groupBox8.Controls.Add(this.btnListDn);
             this.groupBox8.Controls.Add(this.dataGridViewDN);
             this.groupBox8.Location = new System.Drawing.Point(3, 6);
@@ -109,15 +109,15 @@
             this.txtSearchIDDN.Size = new System.Drawing.Size(185, 22);
             this.txtSearchIDDN.TabIndex = 3;
             // 
-            // btnTimKiem
+            // btnSeachDN
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(961, 128);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 28);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.Text = "Tim kiem";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.button1_Click);
+            this.btnSeachDN.Location = new System.Drawing.Point(961, 128);
+            this.btnSeachDN.Name = "btnSeachDN";
+            this.btnSeachDN.Size = new System.Drawing.Size(75, 28);
+            this.btnSeachDN.TabIndex = 2;
+            this.btnSeachDN.Text = "Tim kiem";
+            this.btnSeachDN.UseVisualStyleBackColor = true;
+            this.btnSeachDN.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnListDn
             // 
@@ -166,6 +166,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng ký doanh nghiệp";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnDangkyDN
+            // 
+            this.btnDangkyDN.Location = new System.Drawing.Point(212, 481);
+            this.btnDangkyDN.Name = "btnDangkyDN";
+            this.btnDangkyDN.Size = new System.Drawing.Size(513, 46);
+            this.btnDangkyDN.TabIndex = 11;
+            this.btnDangkyDN.Text = "Đăng ký";
+            this.btnDangkyDN.UseVisualStyleBackColor = true;
+            this.btnDangkyDN.Click += new System.EventHandler(this.btnDangkyDN_Click_1);
             // 
             // groupBox5
             // 
@@ -320,16 +330,6 @@
             this.NVTT.Size = new System.Drawing.Size(1079, 592);
             this.NVTT.TabIndex = 7;
             // 
-            // btnDangkyDN
-            // 
-            this.btnDangkyDN.Location = new System.Drawing.Point(212, 481);
-            this.btnDangkyDN.Name = "btnDangkyDN";
-            this.btnDangkyDN.Size = new System.Drawing.Size(513, 46);
-            this.btnDangkyDN.TabIndex = 11;
-            this.btnDangkyDN.Text = "Đăng ký";
-            this.btnDangkyDN.UseVisualStyleBackColor = true;
-            this.btnDangkyDN.Click += new System.EventHandler(this.btnDangkyDN_Click_1);
-            // 
             // TiepTanHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,7 +386,7 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.DataGridView dataGridViewDN;
         private System.Windows.Forms.Button btnDangkyDN;
-        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnSeachDN;
         private System.Windows.Forms.Button btnListDn;
         private System.Windows.Forms.TextBox txtSearchIDDN;
     }

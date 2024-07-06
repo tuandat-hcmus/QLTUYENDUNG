@@ -53,7 +53,7 @@
     <Compile Include="DAO\DoanhNghiepDAO.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DTO\DoanhNghiep.cs" />
-    <Compile Include="BUL\UserService.cs" />
+    <Compile Include="DTO\UserService.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,5 +155,6 @@
     <Content Include="img\icons-close.png" />
     <None Include="Resources\icons-close.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

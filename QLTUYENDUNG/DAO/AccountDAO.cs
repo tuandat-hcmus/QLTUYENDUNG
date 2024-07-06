@@ -1,11 +1,16 @@
-﻿using System;
+﻿using QLTUYENDUNG.Utilities;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace QLTUYENDUNG.DAO
 {
     internal class AccountDAO
     {
-        public static readonly string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Test"].ConnectionString;
+        public static readonly string connectionString = "Server=desktop-sa0fl96;Database=QLTUYENDUNG;Integrated Security=True;";
         private static AccountDAO instance = null;
 
         public static AccountDAO getInstance()
@@ -19,7 +24,7 @@ namespace QLTUYENDUNG.DAO
 
         public string GetPasswordHash(string username)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 try
                 {
@@ -43,8 +48,9 @@ namespace QLTUYENDUNG.DAO
             return null;
         }
 
-        public string getAccountType(string username) {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+        public string getAccountType(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 try
                 {

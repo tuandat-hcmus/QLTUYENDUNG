@@ -12,15 +12,15 @@ namespace QLTUYENDUNG.DAO
     {
         private readonly string connectionString;
 
-        public DoanhNghiepDAO()
+       /* public DoanhNghiepDAO()
         {
             connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Test"].ConnectionString;
-        }
+        }*/
 
         // Generate the next ID for DoanhNghiep
         private string GetNextId()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 connection.Open();
 
@@ -34,7 +34,7 @@ namespace QLTUYENDUNG.DAO
         // Check if a value exists in the specified column of DOANHNGHIEP table
         private bool CheckExists(string column, string value)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 connection.Open();
                 var command = connection.CreateCommand();
@@ -110,7 +110,7 @@ namespace QLTUYENDUNG.DAO
                 return false;
             }
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 try
                 {
@@ -140,7 +140,7 @@ namespace QLTUYENDUNG.DAO
         {
             DataTable table = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 connection.Open();
 
@@ -154,6 +154,7 @@ namespace QLTUYENDUNG.DAO
 
             return table;
         }
+
 
     }
 }
