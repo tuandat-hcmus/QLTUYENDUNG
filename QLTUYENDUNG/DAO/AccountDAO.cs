@@ -72,5 +72,26 @@ namespace QLTUYENDUNG.DAO
             }
             return null;
         }
+
+        public string getUserFullName(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT Ten FROM NHANVIEN WHERE IDNV = (SELECT IDNV FROM ACCOUNT WHERE username = @Username)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Username", username);
+                    string fullName = command.ExecuteScalar().ToString();
+                    return fullName;
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Error at getUserFullName(): " + ex.Message);
+                    return null;
+                }
+            }
+        }
     }
 }
