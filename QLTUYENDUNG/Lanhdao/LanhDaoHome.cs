@@ -16,5 +16,11 @@ namespace QLTUYENDUNG.Lanhdao
         {
             InitializeComponent();
         }
+
+        private void btnGiaHanHD_Click(object sender, EventArgs e)
+        {
+            FDSGiaHanBLD fDSGiaHanBLD = new FDSGiaHanBLD();
+            fDSGiaHanBLD.ShowDialog();
+        }
     }
 }

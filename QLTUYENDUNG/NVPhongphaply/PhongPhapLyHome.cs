@@ -16,5 +16,17 @@ namespace QLTUYENDUNG.NVPhongphaply
         {
             InitializeComponent();
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            FThongKeDS fThongKeDS = new FThongKeDS();
+            fThongKeDS.ShowDialog();
+        }
+
+        private void btnGiaHan_Click(object sender, EventArgs e)
+        {
+            FGiaHanHD fGiaHanHD = new FGiaHanHD();
+            fGiaHanHD.ShowDialog();
+        }
     }
 }
