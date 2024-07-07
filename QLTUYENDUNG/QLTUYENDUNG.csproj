@@ -88,11 +88,13 @@
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DoanhNghiepDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\PhieuDangKyUngTuyenDAO.cs" />
     <Compile Include="DAO\TTDTDAO.cs" />
     <Compile Include="DAO\UngVienDAO.cs" />
     <Compile Include="DAO\UuDaiDAO.cs" />
     <Compile Include="DTO\DoanhNghiep.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\PhieuDangKyUngTuyen.cs" />
     <Compile Include="DTO\TTDT.cs" />
     <Compile Include="DTO\UngVien.cs" />

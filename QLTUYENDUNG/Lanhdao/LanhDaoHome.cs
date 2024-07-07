@@ -69,5 +69,6 @@ namespace QLTUYENDUNG.Lanhdao
             activateButton(sender);
             dataGridView.DataSource = UngVien.getAllUV();
         }
+
     }
 }

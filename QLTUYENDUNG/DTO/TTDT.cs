@@ -83,5 +83,10 @@ namespace QLTUYENDUNG.DTO
         {
             return TTDTDAO.updateNgayHetHan(idTTDT, ngay);
         }
+
+        public static DataTable getAllTTDT()
+        {
+            return TTDTDAO.getAll();
+        }
     }
 }

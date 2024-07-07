@@ -56,7 +56,7 @@ namespace QLTUYENDUNG
                     }
                     else if (accountType == "NVPL")
                     {
-                        PhongPhapLyHome homePage = new PhongPhapLyHome();
+                        PhongPhapLyHome homePage = new PhongPhapLyHome(username);
                         homePage.ShowDialog();
                     }   
                     else if (accountType == "NVDT")

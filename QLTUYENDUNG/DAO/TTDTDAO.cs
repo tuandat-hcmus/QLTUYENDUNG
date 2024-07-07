@@ -186,5 +186,18 @@ namespace QLTUYENDUNG.DAO
                 }
             }
         }
+
+        public static DataTable getAll()
+        {
+            try
+            {
+                return QueryHelper.ExecuteQuery("SELECT * FROM THONGTINDANGTUYEN");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error at TTDTDAO: getAll(): " + ex.Message);
+            }
+            return null;
+        }
     }
 }
