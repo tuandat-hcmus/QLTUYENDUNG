@@ -1,6 +1,7 @@
 ﻿using QLTUYENDUNG.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -91,6 +92,30 @@ namespace QLTUYENDUNG.DAO
                     Console.WriteLine("Error at getUserFullName(): " + ex.Message);
                     return null;
                 }
+            }
+        }
+
+        public static DataTable getAll()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM NHANVIEN";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                        connection.Close();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("Error at AccountDAO: getAll():" + ex.Message);
+                }
+                return dataTable;
             }
         }
     }

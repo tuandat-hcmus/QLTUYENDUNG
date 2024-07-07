@@ -71,7 +71,7 @@ namespace QLTUYENDUNG
                     }
                     else if (accountType == "BLD")
                     {
-                        LanhDaoHome homePage = new LanhDaoHome();
+                        LanhDaoHome homePage = new LanhDaoHome(username);
                         homePage.ShowDialog();  
                     }
                  

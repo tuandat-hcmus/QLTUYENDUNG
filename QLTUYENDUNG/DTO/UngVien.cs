@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTUYENDUNG.DAO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -37,6 +38,11 @@ namespace QLTUYENDUNG.DTO
             this.CCCD = row["CCCD"].ToString();
             this.DiaChi = row["DiaChi"].ToString();
             this.GioiTinh = row["GioiTinh"].ToString();
+        }
+
+        public static DataTable getAllUV()
+        {
+            return UngVienDAO.getAllUngVien();
         }
     }
 }

@@ -2,6 +2,7 @@
 using QLTUYENDUNG.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,11 @@ namespace QLTUYENDUNG.DTO
                 return AccountDAO.getInstance().getAccountType(username);
             }
             return null;
+        }
+
+        public static DataTable getAllNV()
+        {
+            return AccountDAO.getAll();
         }
     }
 }

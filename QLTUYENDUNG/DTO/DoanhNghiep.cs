@@ -46,5 +46,10 @@ namespace QLTUYENDUNG.DTO
             }
             return null;
         }
+
+        public static DataTable getAllDoanhNghiepDataTable()
+        {
+            return DoanhNghiepDAO.getAllDoanhNghiep();
+        }
     }
 }
