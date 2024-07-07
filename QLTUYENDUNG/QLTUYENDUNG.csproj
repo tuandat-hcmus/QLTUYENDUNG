@@ -90,10 +90,12 @@
     <Compile Include="DAO\DoanhNghiepDAO.cs" />
     <Compile Include="DAO\PhieuDangKyUngTuyenDAO.cs" />
     <Compile Include="DAO\TTDTDAO.cs" />
+    <Compile Include="DAO\UngVienDAO.cs" />
     <Compile Include="DAO\UuDaiDAO.cs" />
     <Compile Include="DTO\DoanhNghiep.cs" />
     <Compile Include="DTO\PhieuDangKyUngTuyen.cs" />
     <Compile Include="DTO\TTDT.cs" />
+    <Compile Include="DTO\UngVien.cs" />
     <Compile Include="DTO\UserService.cs" />
     <Compile Include="DTO\UuDai.cs" />
     <Compile Include="HomePage.cs">

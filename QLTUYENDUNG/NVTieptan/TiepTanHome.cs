@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTUYENDUNG.DAO; 
@@ -21,8 +22,11 @@ namespace QLTUYENDUNG.NVTieptan
         private void TiepTanHome_Load(object sender, EventArgs e)
         {
             compsDataGrid.Rows.Clear();
+            membersDataGrid.Rows.Clear();
             DataTable comps = DoanhNghiepDAO.getAllDoanhNghiep();
+            DataTable members = UngVienDAO.getAllUngVien();
             compsDataGrid.DataSource = comps;
+            membersDataGrid.DataSource = members;
         }
 
         private void signInMemberBtn_Click(object sender, EventArgs e)
@@ -45,6 +49,31 @@ namespace QLTUYENDUNG.NVTieptan
             tiepTanTab.SelectedIndex = 3;
         }
 
-        
+        private void dangKiUVBtn_Click(object sender, EventArgs e)
+        {
+            string ten = tenUngVienBox.Text;
+            string sdt = sdtUngVienBox.Text;
+            string diaChi = diaChiUngVienBox.Text;
+            string email = emailUngVienBox.Text;
+            string cccd = cccdUngVienBox.Text;
+            bool isMale = isMaleBtn.Checked;
+            bool isFemale = isFemaleBtn.Checked;
+            if(string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(sdt) || string.IsNullOrWhiteSpace(diaChi) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(cccd) || (!isFemale && !isMale))
+            {
+                MessageBox.Show("Missing field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if(!Regex.Match(sdt, @"^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$").Success)
+                {
+                    MessageBox.Show("Invalid phone number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if(!Regex.Match(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").Success)
+                {
+                    MessageBox.Show("Invalid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+        }
     }
 }
