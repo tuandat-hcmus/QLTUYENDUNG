@@ -12,17 +12,20 @@ namespace QLTUYENDUNG.DTO
     {
         public string IDDoanhNghiep { get; set; }
         public string Ten { get; set; }
+        public string NguoiDaiDien { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }
         public string TaxID { get; set; }
 
-        public DoanhNghiep(string iDDoanhNghiep, string ten, string email, string diaChi, string taxID)
+        public DoanhNghiep(string iDDoanhNghiep, string ten, string taxID, string email, string diaChi, string nguoidaidien)
         {
             IDDoanhNghiep = iDDoanhNghiep;
             Ten = ten;
+            NguoiDaiDien = nguoidaidien;
             Email = email;
             DiaChi = diaChi;
             TaxID = taxID;
+
         }
 
         public DoanhNghiep(DataRow row)

@@ -41,11 +41,6 @@
             this.signInMemberBtn = new System.Windows.Forms.Button();
             this.tiepTanTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.membersDataGrid = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.compsDataGrid = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.CCCD = new System.Windows.Forms.TextBox();
@@ -67,10 +62,11 @@
             this.tenUVBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.diaChiCtyBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dangKiDNBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.emailLienHeBox = new System.Windows.Forms.TextBox();
@@ -85,16 +81,15 @@
             this.tenCongTyBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.membersDataGrid = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.compsDataGrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tiepTanTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.membersDataGrid)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.compsDataGrid)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -102,12 +97,17 @@
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.membersDataGrid)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.compsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,6 +142,7 @@
             this.userNameBox.Name = "userNameBox";
             this.userNameBox.Size = new System.Drawing.Size(143, 22);
             this.userNameBox.TabIndex = 2;
+            this.userNameBox.TextChanged += new System.EventHandler(this.userNameBox_TextChanged);
             // 
             // pictureBox1
             // 
@@ -223,100 +224,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Đăng kí thành viên";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(963, 540);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Đăng kí doanh nghiệp";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.membersDataGrid);
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(963, 540);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Danh sách thành viên";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // membersDataGrid
-            // 
-            this.membersDataGrid.AllowUserToAddRows = false;
-            this.membersDataGrid.AllowUserToDeleteRows = false;
-            this.membersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.membersDataGrid.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.membersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.membersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.membersDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.membersDataGrid.EnableHeadersVisualStyles = false;
-            this.membersDataGrid.Location = new System.Drawing.Point(3, 3);
-            this.membersDataGrid.Name = "membersDataGrid";
-            this.membersDataGrid.RowHeadersVisible = false;
-            this.membersDataGrid.RowHeadersWidth = 51;
-            this.membersDataGrid.RowTemplate.Height = 24;
-            this.membersDataGrid.Size = new System.Drawing.Size(957, 534);
-            this.membersDataGrid.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.compsDataGrid);
-            this.tabPage4.Location = new System.Drawing.Point(4, 26);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(963, 540);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Danh sách doanh nghiệp";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // compsDataGrid
-            // 
-            this.compsDataGrid.AllowUserToAddRows = false;
-            this.compsDataGrid.AllowUserToDeleteRows = false;
-            this.compsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.compsDataGrid.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.compsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.compsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.compsDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.compsDataGrid.EnableHeadersVisualStyles = false;
-            this.compsDataGrid.GridColor = System.Drawing.Color.DarkGray;
-            this.compsDataGrid.Location = new System.Drawing.Point(3, 3);
-            this.compsDataGrid.Name = "compsDataGrid";
-            this.compsDataGrid.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.compsDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.compsDataGrid.RowHeadersVisible = false;
-            this.compsDataGrid.RowHeadersWidth = 51;
-            this.compsDataGrid.RowTemplate.Height = 24;
-            this.compsDataGrid.Size = new System.Drawing.Size(957, 534);
-            this.compsDataGrid.TabIndex = 0;
             // 
             // panel10
             // 
@@ -559,21 +466,16 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "ĐĂNG KÍ THÀNH VIÊN";
             // 
-            // panel3
+            // tabPage2
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.dangKiDNBtn);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.panel9);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(13, 6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(936, 528);
-            this.panel3.TabIndex = 3;
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(963, 540);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Đăng kí doanh nghiệp";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -581,7 +483,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.diaChiCtyBox);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(11, 283);
+            this.panel4.Location = new System.Drawing.Point(1, 198);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(935, 52);
             this.panel4.TabIndex = 3;
@@ -607,6 +509,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Địa chỉ";
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.dangKiDNBtn);
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Controls.Add(this.panel9);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Location = new System.Drawing.Point(13, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(936, 528);
+            this.panel3.TabIndex = 3;
+            // 
             // dangKiDNBtn
             // 
             this.dangKiDNBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -624,6 +543,7 @@
             this.dangKiDNBtn.TabIndex = 0;
             this.dangKiDNBtn.Text = "Đăng kí";
             this.dangKiDNBtn.UseVisualStyleBackColor = false;
+            this.dangKiDNBtn.Click += new System.EventHandler(this.dangKiDNBtn_Click);
             // 
             // panel6
             // 
@@ -631,7 +551,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.emailLienHeBox);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(2, 353);
+            this.panel6.Location = new System.Drawing.Point(1, 112);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(935, 65);
             this.panel6.TabIndex = 3;
@@ -663,7 +583,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.nguoiDaiDienBox);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(0, 195);
+            this.panel7.Location = new System.Drawing.Point(1, 353);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(935, 52);
             this.panel7.TabIndex = 3;
@@ -695,7 +615,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Controls.Add(this.idThueBox);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(0, 114);
+            this.panel8.Location = new System.Drawing.Point(0, 275);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(935, 55);
             this.panel8.TabIndex = 2;
@@ -763,6 +683,88 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "ĐĂNG KÍ THÀNH VIÊN DOANH NGHIỆP";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.membersDataGrid);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(963, 540);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Danh sách thành viên";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // membersDataGrid
+            // 
+            this.membersDataGrid.AllowUserToAddRows = false;
+            this.membersDataGrid.AllowUserToDeleteRows = false;
+            this.membersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.membersDataGrid.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.membersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.membersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.membersDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.membersDataGrid.EnableHeadersVisualStyles = false;
+            this.membersDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.membersDataGrid.Name = "membersDataGrid";
+            this.membersDataGrid.RowHeadersVisible = false;
+            this.membersDataGrid.RowHeadersWidth = 51;
+            this.membersDataGrid.RowTemplate.Height = 24;
+            this.membersDataGrid.Size = new System.Drawing.Size(957, 534);
+            this.membersDataGrid.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.compsDataGrid);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(963, 540);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Danh sách doanh nghiệp";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // compsDataGrid
+            // 
+            this.compsDataGrid.AllowUserToAddRows = false;
+            this.compsDataGrid.AllowUserToDeleteRows = false;
+            this.compsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.compsDataGrid.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.compsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.compsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.compsDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.compsDataGrid.EnableHeadersVisualStyles = false;
+            this.compsDataGrid.GridColor = System.Drawing.Color.DarkGray;
+            this.compsDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.compsDataGrid.Name = "compsDataGrid";
+            this.compsDataGrid.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.compsDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.compsDataGrid.RowHeadersVisible = false;
+            this.compsDataGrid.RowHeadersWidth = 51;
+            this.compsDataGrid.RowTemplate.Height = 24;
+            this.compsDataGrid.Size = new System.Drawing.Size(957, 534);
+            this.compsDataGrid.TabIndex = 0;
+            // 
             // TiepTanHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -780,11 +782,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tiepTanTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.membersDataGrid)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.compsDataGrid)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -799,10 +796,11 @@
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -811,6 +809,10 @@
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.membersDataGrid)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.compsDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
