@@ -106,5 +106,42 @@ namespace QLTUYENDUNG.NVTieptan
             compsDataGrid.DataSource = comps;
             membersDataGrid.DataSource = members;
         }
+
+        private void dangKiDNBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tenCongTyBox.Text) || string.IsNullOrEmpty(idThueBox.Text)
+                || string.IsNullOrEmpty(diaChiCtyBox.Text) || string.IsNullOrEmpty(emailLienHeBox.Text) || string.IsNullOrEmpty(nguoiDaiDienBox.Text))
+            {
+                MessageBox.Show("Không được để trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            string Ten = tenCongTyBox.Text;
+            string TaxID = idThueBox.Text;
+            string DiaChi = diaChiCtyBox.Text;
+            string Email = emailLienHeBox.Text;
+            string NguoiDaiDien = nguoiDaiDienBox.Text;
+            if (!Regex.Match(Email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").Success)
+            {
+                MessageBox.Show("Invalid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool isSuccess = DoanhNghiepDAO.AddDoanhNghiep(Ten, Email, DiaChi, TaxID, NguoiDaiDien);
+            if (isSuccess)
+            {
+                MessageBox.Show("Thành công.");
+                tenCongTyBox.Text = string.Empty;
+                idThueBox.Text = string.Empty;
+                diaChiCtyBox.Text = string.Empty;
+                emailLienHeBox.Text = string.Empty;
+                nguoiDaiDienBox.Text = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Thêm doanh nghiệp thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
