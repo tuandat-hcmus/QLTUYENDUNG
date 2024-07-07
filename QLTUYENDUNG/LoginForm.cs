@@ -15,6 +15,7 @@ using QLTUYENDUNG.NVTieptan;
 using QLTUYENDUNG.NVPhongphaply;
 using QLTUYENDUNG.NVDangtuyen;
 using QLTUYENDUNG.Lanhdao;
+using QLTUYENDUNG.NVTuyendung;
 
 namespace QLTUYENDUNG
 {
@@ -50,6 +51,7 @@ namespace QLTUYENDUNG
                     if(accountType == "NVTT")
                     {
                         TiepTanHome homePage = new TiepTanHome();
+                        homePage.setUserFulName(AccountDAO.getInstance().getUserFullName(username));
                         homePage.ShowDialog();
                     }
                     else if (accountType == "NVPL")
@@ -64,7 +66,7 @@ namespace QLTUYENDUNG
                     }
                     else if (accountType == "NVTD")
                     {
-                        DangTuyenHome homePage = new DangTuyenHome();
+                        TuyenDungHome homePage = new TuyenDungHome();
                         homePage.ShowDialog();
                     }
                     else if (accountType == "BLD")

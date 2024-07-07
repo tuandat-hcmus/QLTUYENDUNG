@@ -77,7 +77,7 @@
             this.dataGridViewUuDai.RowHeadersVisible = false;
             this.dataGridViewUuDai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUuDai.Size = new System.Drawing.Size(763, 250);
-            this.dataGridViewUuDai.TabIndex = 17;
+            this.dataGridViewUuDai.TabIndex = 1;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 29);
-            this.label1.TabIndex = 22;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Thêm ưu đãi";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -99,7 +99,7 @@
             this.btnChon.Location = new System.Drawing.Point(694, 338);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(86, 25);
-            this.btnChon.TabIndex = 24;
+            this.btnChon.TabIndex = 2;
             this.btnChon.Text = "Chọn";
             this.btnChon.UseVisualStyleBackColor = true;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
@@ -111,7 +111,7 @@
             this.btnThem.Location = new System.Drawing.Point(602, 338);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(86, 25);
-            this.btnThem.TabIndex = 25;
+            this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
@@ -122,7 +122,7 @@
             this.button1.Location = new System.Drawing.Point(17, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 25);
-            this.button1.TabIndex = 26;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Xóa";
             this.button1.UseVisualStyleBackColor = true;
             // 

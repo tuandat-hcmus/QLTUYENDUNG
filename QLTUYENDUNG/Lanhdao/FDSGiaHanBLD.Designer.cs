@@ -66,7 +66,7 @@
             this.label4.Location = new System.Drawing.Point(47, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 17);
-            this.label4.TabIndex = 17;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Tên doanh nghiệp:";
             // 
             // dataGridViewDSUV
@@ -109,7 +109,7 @@
             this.dataGridViewDSUV.RowHeadersVisible = false;
             this.dataGridViewDSUV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDSUV.Size = new System.Drawing.Size(882, 144);
-            this.dataGridViewDSUV.TabIndex = 16;
+            this.dataGridViewDSUV.TabIndex = 5;
             // 
             // panel1
             // 
@@ -119,7 +119,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 74);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 5;
             // 
             // label1
             // 
@@ -140,7 +140,7 @@
             this.btnTim.Location = new System.Drawing.Point(773, 97);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(159, 25);
-            this.btnTim.TabIndex = 13;
+            this.btnTim.TabIndex = 1;
             this.btnTim.Text = "Các hợp đồng đã nhận";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
@@ -155,7 +155,7 @@
             this.btnGuiDS.Location = new System.Drawing.Point(749, 345);
             this.btnGuiDS.Name = "btnGuiDS";
             this.btnGuiDS.Size = new System.Drawing.Size(159, 25);
-            this.btnGuiDS.TabIndex = 12;
+            this.btnGuiDS.TabIndex = 7;
             this.btnGuiDS.Text = "Yêu cầu gia hạn";
             this.btnGuiDS.UseVisualStyleBackColor = false;
             this.btnGuiDS.Click += new System.EventHandler(this.btnGuiDS_Click);
@@ -167,7 +167,7 @@
             this.label3.Location = new System.Drawing.Point(23, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
-            this.label3.TabIndex = 11;
+            this.label3.TabIndex = 14;
             this.label3.Text = "Ghi chú:";
             // 
             // label2
@@ -177,7 +177,7 @@
             this.label2.Location = new System.Drawing.Point(47, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 17);
-            this.label2.TabIndex = 10;
+            this.label2.TabIndex = 3;
             this.label2.Text = "Mã hợp đồng:";
             // 
             // textBoxMaHD
@@ -186,7 +186,7 @@
             this.textBoxMaHD.Location = new System.Drawing.Point(240, 97);
             this.textBoxMaHD.Name = "textBoxMaHD";
             this.textBoxMaHD.Size = new System.Drawing.Size(197, 25);
-            this.textBoxMaHD.TabIndex = 18;
+            this.textBoxMaHD.TabIndex = 0;
             this.textBoxMaHD.Enter += new System.EventHandler(this.textBoxMaHD_Enter);
             this.textBoxMaHD.Leave += new System.EventHandler(this.textBoxMaHD_Leave);
             // 
@@ -197,7 +197,7 @@
             this.textBoxTenDN.Location = new System.Drawing.Point(240, 135);
             this.textBoxTenDN.Name = "textBoxTenDN";
             this.textBoxTenDN.Size = new System.Drawing.Size(197, 25);
-            this.textBoxTenDN.TabIndex = 19;
+            this.textBoxTenDN.TabIndex = 2;
             // 
             // panel2
             // 
@@ -219,7 +219,7 @@
             this.panel2.Location = new System.Drawing.Point(24, 166);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(932, 383);
-            this.panel2.TabIndex = 20;
+            this.panel2.TabIndex = 5;
             // 
             // btnHuy
             // 
@@ -231,7 +231,7 @@
             this.btnHuy.Location = new System.Drawing.Point(584, 345);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(159, 25);
-            this.btnHuy.TabIndex = 31;
+            this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -246,7 +246,7 @@
             this.btnUuDai.Location = new System.Drawing.Point(26, 345);
             this.btnUuDai.Name = "btnUuDai";
             this.btnUuDai.Size = new System.Drawing.Size(159, 25);
-            this.btnUuDai.TabIndex = 30;
+            this.btnUuDai.TabIndex = 6;
             this.btnUuDai.Text = "Thêm ưu đãi";
             this.btnUuDai.UseVisualStyleBackColor = false;
             this.btnUuDai.Click += new System.EventHandler(this.btnUuDai_Click);
@@ -258,7 +258,7 @@
             this.label9.Location = new System.Drawing.Point(23, 165);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 17);
-            this.label9.TabIndex = 29;
+            this.label9.TabIndex = 9;
             this.label9.Text = "Ứng viên ứng tuyển:";
             // 
             // textBoxGhiChu
@@ -269,7 +269,7 @@
             this.textBoxGhiChu.Multiline = true;
             this.textBoxGhiChu.Name = "textBoxGhiChu";
             this.textBoxGhiChu.Size = new System.Drawing.Size(799, 58);
-            this.textBoxGhiChu.TabIndex = 28;
+            this.textBoxGhiChu.TabIndex = 4;
             // 
             // textBoxTT
             // 
@@ -278,7 +278,7 @@
             this.textBoxTT.Location = new System.Drawing.Point(711, 50);
             this.textBoxTT.Name = "textBoxTT";
             this.textBoxTT.Size = new System.Drawing.Size(197, 25);
-            this.textBoxTT.TabIndex = 27;
+            this.textBoxTT.TabIndex = 3;
             // 
             // textBoxHinhThucDT
             // 
@@ -287,7 +287,7 @@
             this.textBoxHinhThucDT.Location = new System.Drawing.Point(216, 50);
             this.textBoxHinhThucDT.Name = "textBoxHinhThucDT";
             this.textBoxHinhThucDT.Size = new System.Drawing.Size(197, 25);
-            this.textBoxHinhThucDT.TabIndex = 26;
+            this.textBoxHinhThucDT.TabIndex = 2;
             // 
             // label7
             // 
@@ -296,7 +296,7 @@
             this.label7.Location = new System.Drawing.Point(572, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 17);
-            this.label7.TabIndex = 25;
+            this.label7.TabIndex = 13;
             this.label7.Text = "Tình trạng:";
             // 
             // label8
@@ -306,7 +306,7 @@
             this.label8.Location = new System.Drawing.Point(23, 53);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(148, 17);
-            this.label8.TabIndex = 24;
+            this.label8.TabIndex = 12;
             this.label8.Text = "Hình thức đăng tuyển:";
             // 
             // textBoxNgayHH
@@ -316,7 +316,7 @@
             this.textBoxNgayHH.Location = new System.Drawing.Point(711, 10);
             this.textBoxNgayHH.Name = "textBoxNgayHH";
             this.textBoxNgayHH.Size = new System.Drawing.Size(197, 25);
-            this.textBoxNgayHH.TabIndex = 23;
+            this.textBoxNgayHH.TabIndex = 1;
             // 
             // textBoxThoiGianDT
             // 
@@ -325,7 +325,7 @@
             this.textBoxThoiGianDT.Location = new System.Drawing.Point(216, 7);
             this.textBoxThoiGianDT.Name = "textBoxThoiGianDT";
             this.textBoxThoiGianDT.Size = new System.Drawing.Size(197, 25);
-            this.textBoxThoiGianDT.TabIndex = 22;
+            this.textBoxThoiGianDT.TabIndex = 0;
             // 
             // label5
             // 
@@ -334,7 +334,7 @@
             this.label5.Location = new System.Drawing.Point(572, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 17);
-            this.label5.TabIndex = 21;
+            this.label5.TabIndex = 11;
             this.label5.Text = "Ngày hết hạn:";
             // 
             // label6
@@ -344,7 +344,7 @@
             this.label6.Location = new System.Drawing.Point(23, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 17);
-            this.label6.TabIndex = 20;
+            this.label6.TabIndex = 10;
             this.label6.Text = "Thời gian đăng tuyển:";
             // 
             // FDSGiaHanBLD

@@ -227,16 +227,16 @@ VALUES
 
 -- Insert data into THONGTINDANGTUYEN
 INSERT INTO THONGTINDANGTUYEN (IDTTDT, ThoiGianDT, HinhThucDT, NgayHetHan, TinhTrang, GhiChu, IDDoanhNghiep, NhanVienDuyet) VALUES
-('TT001', '2024-01-15 09:00:00', N'Trực tiếp', '2024-02-15', N'Đang tuyển', N'', 'DN001', 'NV001'),
-('TT002', '2024-02-20 10:00:00', N'Trực tiếp', '2024-03-20', N'Đang tuyển', N'', 'DN002', 'NV002'),
-('TT003', '2024-03-25 11:00:00', N'Trực tiếp', '2024-04-25', N'Đang tuyển', N'', 'DN003', 'NV003'),
-('TT004', '2024-04-30 12:00:00', N'Trực tiếp', '2024-05-30', N'Đang tuyển', N'', 'DN004', 'NV004'),
-('TT005', '2024-05-05 13:00:00', N'Trực tiếp', '2024-06-05', N'Đang tuyển', N'', 'DN005', 'NV005'),
-('TT006', '2024-06-10 14:00:00', N'Trực tiếp', '2024-07-10', N'Đang tuyển', N'', 'DN006', 'NV006'),
-('TT007', '2024-07-15 15:00:00', N'Trực tiếp', '2024-08-15', N'Đang tuyển', N'', 'DN007', 'NV007'),
-('TT008', '2024-08-20 16:00:00', N'Trực tiếp', '2024-09-20', N'Đang tuyển', N'', 'DN008', 'NV008'),
-('TT009', '2024-09-25 17:00:00', N'Trực tiếp', '2024-10-25', N'Đang tuyển', N'', 'DN009', 'NV009'),
-('TT010', '2024-10-30 18:00:00', N'Trực tiếp', '2024-11-30', N'Đang tuyển', N'', 'DN010', 'NV010');
+('TT001', '2024-01-15 09:00:00', N'Trực tiếp', '2024-02-15', N'Hết hạn', N'', 'DN001', 'NV001'),
+('TT002', '2024-02-20 10:00:00', N'Trực tiếp', '2024-03-20', N'Hết hạn', N'', 'DN002', 'NV002'),
+('TT003', '2024-03-25 11:00:00', N'Trực tiếp', '2024-04-25', N'Hết hạn', N'', 'DN003', 'NV003'),
+('TT004', '2024-04-30 12:00:00', N'Trực tiếp', '2024-05-30', N'Hết hạn', N'', 'DN004', 'NV004'),
+('TT005', '2024-05-05 13:00:00', N'Trực tiếp', '2024-06-05', N'Hết hạn', N'', 'DN005', 'NV005'),
+('TT006', '2024-06-10 14:00:00', N'Trực tiếp', '2024-07-10', N'Đã đăng tuyển', N'', 'DN006', 'NV006'),
+('TT007', '2024-07-15 15:00:00', N'Trực tiếp', '2024-08-15', N'Đã đăng tuyển', N'', 'DN007', 'NV007'),
+('TT008', '2024-08-20 16:00:00', N'Trực tiếp', '2024-09-20', N'Đã đăng tuyển', N'', 'DN008', 'NV008'),
+('TT009', '2024-09-25 17:00:00', N'Trực tiếp', '2024-10-25', N'Chưa đăng tuyển', N'', 'DN009', 'NV009'),
+('TT010', '2024-10-30 18:00:00', N'Trực tiếp', '2024-11-30', N'Chưa đăng tuyển', N'', 'DN010', 'NV010');
 
 -- Insert data into UUDAI
 INSERT INTO UUDAI (IDUuDai, Mota, Ten) VALUES
@@ -402,3 +402,49 @@ INSERT INTO  ACCOUNT VALUES
 ('NV008', '6298ac27f4e351433d6af1a819594de60542f81aa52f44b67978464440fef7cc', 'NVPL', 'NV008'),
 ('NV009', 'a1cca23e33984d7f316da9b418c70e94c2c2135d0b6623e79c9e984a2dd1128c', 'NVDT', 'NV009'),
 ('NV010', '4428654896bc9024ac4cc79c1880eed6ca62598f5e65b60a8da8d39dc438bbd8', 'BLD', 'NV010')
+
+
+
+ALTER TABLE DOANHNGHIEP
+ADD NguoiDaiDien nvarchar(255);
+
+-- Update existing records to include representative information
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Nguyen Van A'
+WHERE IDDoanhNghiep = 'DN001';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Tran Thi B'
+WHERE IDDoanhNghiep = 'DN002';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Le Van C'
+WHERE IDDoanhNghiep = 'DN003';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Pham Thi D'
+WHERE IDDoanhNghiep = 'DN004';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Nguyen Thi E'
+WHERE IDDoanhNghiep = 'DN005';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Tran Van F'
+WHERE IDDoanhNghiep = 'DN006';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Le Thi G'
+WHERE IDDoanhNghiep = 'DN007';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Pham Van H'
+WHERE IDDoanhNghiep = 'DN008';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Nguyen Thi I'
+WHERE IDDoanhNghiep = 'DN009';
+
+UPDATE DOANHNGHIEP
+SET NguoiDaiDien = N'Tran Van J'
+WHERE IDDoanhNghiep = 'DN010';

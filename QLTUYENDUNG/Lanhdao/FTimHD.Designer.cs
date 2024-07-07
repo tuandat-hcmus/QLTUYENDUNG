@@ -77,7 +77,7 @@
             this.dataGridViewDSHD.RowHeadersVisible = false;
             this.dataGridViewDSHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDSHD.Size = new System.Drawing.Size(848, 331);
-            this.dataGridViewDSHD.TabIndex = 20;
+            this.dataGridViewDSHD.TabIndex = 1;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             this.label1.Location = new System.Drawing.Point(21, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 29);
-            this.label1.TabIndex = 21;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm hợp đồng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -99,7 +99,7 @@
             this.btnChon.Location = new System.Drawing.Point(779, 406);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(86, 25);
-            this.btnChon.TabIndex = 23;
+            this.btnChon.TabIndex = 2;
             this.btnChon.Text = "Chọn";
             this.btnChon.UseVisualStyleBackColor = true;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);

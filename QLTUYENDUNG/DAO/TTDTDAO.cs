@@ -169,7 +169,7 @@ namespace QLTUYENDUNG.DAO
                 try
                 {
                     connection.Open();
-                    string query = $"UPDATE THONGTINDANGTUYEN SET NgayHetHan = DATEADD(DAY, @Ngay, NgayHetHan), TinhTrang = '' " +
+                    string query = $"UPDATE THONGTINDANGTUYEN SET NgayHetHan = DATEADD(DAY, @Ngay, NgayHetHan), TinhTrang = N'Đã đăng tuyển' " +
                         $"WHERE IDTTDT = @Id";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Id", idTTDT);

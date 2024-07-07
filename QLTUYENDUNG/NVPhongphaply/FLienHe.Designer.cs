@@ -48,7 +48,7 @@
             this.textBoxTu.Location = new System.Drawing.Point(126, 48);
             this.textBoxTu.Name = "textBoxTu";
             this.textBoxTu.Size = new System.Drawing.Size(424, 25);
-            this.textBoxTu.TabIndex = 27;
+            this.textBoxTu.TabIndex = 0;
             // 
             // label2
             // 
@@ -110,7 +110,7 @@
             this.textBoxDen.Location = new System.Drawing.Point(126, 79);
             this.textBoxDen.Name = "textBoxDen";
             this.textBoxDen.Size = new System.Drawing.Size(424, 25);
-            this.textBoxDen.TabIndex = 31;
+            this.textBoxDen.TabIndex = 1;
             // 
             // textBoxNoiDung
             // 
@@ -130,7 +130,7 @@
             this.btnLienHe.Location = new System.Drawing.Point(391, 301);
             this.btnLienHe.Name = "btnLienHe";
             this.btnLienHe.Size = new System.Drawing.Size(159, 25);
-            this.btnLienHe.TabIndex = 33;
+            this.btnLienHe.TabIndex = 3;
             this.btnLienHe.Text = "Gửi";
             this.btnLienHe.UseVisualStyleBackColor = false;
             this.btnLienHe.Click += new System.EventHandler(this.btnLienHe_Click);
@@ -141,7 +141,7 @@
             this.textBoxTieuDe.Location = new System.Drawing.Point(126, 110);
             this.textBoxTieuDe.Name = "textBoxTieuDe";
             this.textBoxTieuDe.Size = new System.Drawing.Size(424, 25);
-            this.textBoxTieuDe.TabIndex = 35;
+            this.textBoxTieuDe.TabIndex = 2;
             // 
             // label5
             // 
@@ -169,6 +169,7 @@
             this.Controls.Add(this.textBoxTu);
             this.Controls.Add(this.label2);
             this.Name = "FLienHe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLienHe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

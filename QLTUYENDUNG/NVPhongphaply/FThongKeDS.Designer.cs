@@ -99,7 +99,7 @@
             this.btnThongKe.Location = new System.Drawing.Point(569, 97);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(159, 25);
-            this.btnThongKe.TabIndex = 4;
+            this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
@@ -117,7 +117,7 @@
             this.comboBoxNgay.Location = new System.Drawing.Point(135, 98);
             this.comboBoxNgay.Name = "comboBoxNgay";
             this.comboBoxNgay.Size = new System.Drawing.Size(145, 25);
-            this.comboBoxNgay.TabIndex = 5;
+            this.comboBoxNgay.TabIndex = 0;
             // 
             // panel1
             // 
@@ -193,7 +193,7 @@
             this.comboBoxTT.Location = new System.Drawing.Point(397, 98);
             this.comboBoxTT.Name = "comboBoxTT";
             this.comboBoxTT.Size = new System.Drawing.Size(126, 25);
-            this.comboBoxTT.TabIndex = 9;
+            this.comboBoxTT.TabIndex = 1;
             // 
             // FThongKeDS
             // 

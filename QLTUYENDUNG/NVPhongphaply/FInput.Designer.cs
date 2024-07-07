@@ -39,7 +39,7 @@
             this.textBoxInput.Location = new System.Drawing.Point(102, 66);
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.Size = new System.Drawing.Size(139, 25);
-            this.textBoxInput.TabIndex = 29;
+            this.textBoxInput.TabIndex = 1;
             // 
             // label2
             // 
@@ -48,7 +48,7 @@
             this.label2.Location = new System.Drawing.Point(85, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 17);
-            this.label2.TabIndex = 28;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Nhập số ngày gia hạn thêm";
             // 
             // btnOK
@@ -60,7 +60,7 @@
             this.btnOK.Location = new System.Drawing.Point(127, 107);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(93, 25);
-            this.btnOK.TabIndex = 35;
+            this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
