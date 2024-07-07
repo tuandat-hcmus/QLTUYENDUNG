@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using QLTUYENDUNG.NVTieptan;
 using QLTUYENDUNG.NVPhongphaply;
 using QLTUYENDUNG.NVDangtuyen;
+using QLTUYENDUNG.NVTuyendung;
 using QLTUYENDUNG.Lanhdao;
 
 namespace QLTUYENDUNG
@@ -64,7 +65,7 @@ namespace QLTUYENDUNG
                     }
                     else if (accountType == "NVTD")
                     {
-                        DangTuyenHome homePage = new DangTuyenHome();
+                        TuyenDungHome homePage = new TuyenDungHome();
                         homePage.ShowDialog();
                     }
                     else if (accountType == "BLD")

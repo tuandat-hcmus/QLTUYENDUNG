@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\UngVienDAO.cs" />
+    <Compile Include="DAO\PhieuDKDAO.cs" />
+    <Compile Include="DAO\HSUVDAO.cs" />
+    <Compile Include="DAO\ViTriTuyenDungDAO.cs" />
+    <Compile Include="DTO\HoSoUngVien.cs" />
+    <Compile Include="DTO\ViTriTuyenDung.cs" />
     <Compile Include="DTO\UserService.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
@@ -84,6 +90,24 @@
     <Compile Include="NVTieptan\TiepTanHome.Designer.cs">
       <DependentUpon>TiepTanHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVTuyendung\ThemBangCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVTuyendung\ThemBangCap.Designer.cs">
+      <DependentUpon>ThemBangCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVTuyendung\ThemHoSoTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVTuyendung\ThemHoSoTuyenDung.Designer.cs">
+      <DependentUpon>ThemHoSoTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVTuyendung\ViTriTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVTuyendung\ViTriTuyenDung.Designer.cs">
+      <DependentUpon>ViTriTuyenDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVTuyendung\TuyenDungHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,8 +136,14 @@
     <EmbeddedResource Include="NVTieptan\TiepTanHome.resx">
       <DependentUpon>TiepTanHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NVTuyendung\ThemHoSoTuyenDung.resx">
+      <DependentUpon>ThemHoSoTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NVTuyendung\TuyenDungHome.resx">
       <DependentUpon>TuyenDungHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVTuyendung\ViTriTuyenDung.resx">
+      <DependentUpon>ViTriTuyenDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
