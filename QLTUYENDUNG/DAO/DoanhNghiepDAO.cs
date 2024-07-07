@@ -10,6 +10,7 @@ namespace QLTUYENDUNG.DAO
 {
     internal class DoanhNghiepDAO
     {
+
         public static DataTable getDoanhNghiepbyID(string id)
         {
             DataTable dataTable = new DataTable();

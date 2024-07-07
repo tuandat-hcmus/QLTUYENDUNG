@@ -51,11 +51,11 @@ namespace QLTUYENDUNG.NVTieptan
 
         private void dangKiUVBtn_Click(object sender, EventArgs e)
         {
-            string ten = tenUngVienBox.Text;
-            string sdt = sdtUngVienBox.Text;
-            string diaChi = diaChiUngVienBox.Text;
-            string email = emailUngVienBox.Text;
-            string cccd = cccdUngVienBox.Text;
+            string ten = tenUVBox.Text;
+            string sdt = sdtUVBox.Text;
+            string diaChi = diaChiUVBox.Text;
+            string email = emailUVBox.Text;
+            string cccd = CCCD.Text;
             bool isMale = isMaleBtn.Checked;
             bool isFemale = isFemaleBtn.Checked;
             if(string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(sdt) || string.IsNullOrWhiteSpace(diaChi) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(cccd) || (!isFemale && !isMale))
@@ -74,6 +74,11 @@ namespace QLTUYENDUNG.NVTieptan
                 }
                 
             }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
