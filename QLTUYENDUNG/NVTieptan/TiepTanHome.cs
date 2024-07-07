@@ -14,6 +14,11 @@ namespace QLTUYENDUNG.NVTieptan
 {
     public partial class TiepTanHome : Form
     {
+        private string userFullName; 
+        public void setUserFulName(string fulName)
+        {
+            userFullName = fulName;
+        }
         public TiepTanHome()
         {
             InitializeComponent();
@@ -27,6 +32,7 @@ namespace QLTUYENDUNG.NVTieptan
             DataTable members = UngVienDAO.getAllUngVien();
             compsDataGrid.DataSource = comps;
             membersDataGrid.DataSource = members;
+            userNameBox.Text = userFullName;
         }
 
         private void signInMemberBtn_Click(object sender, EventArgs e)
@@ -91,6 +97,14 @@ namespace QLTUYENDUNG.NVTieptan
                     Console.WriteLine(rowCount + " inserted to UNGVIEN");
                 }
             }
+        }
+
+        private void tiepTanTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable comps = DoanhNghiepDAO.getAllDoanhNghiep();
+            DataTable members = UngVienDAO.getAllUngVien();
+            compsDataGrid.DataSource = comps;
+            membersDataGrid.DataSource = members;
         }
     }
 }

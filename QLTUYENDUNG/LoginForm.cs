@@ -51,6 +51,7 @@ namespace QLTUYENDUNG
                     if(accountType == "NVTT")
                     {
                         TiepTanHome homePage = new TiepTanHome();
+                        homePage.setUserFulName(AccountDAO.getInstance().getUserFullName(username));
                         homePage.ShowDialog();
                     }
                     else if (accountType == "NVPL")
