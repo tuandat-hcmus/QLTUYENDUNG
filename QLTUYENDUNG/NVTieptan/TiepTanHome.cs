@@ -68,11 +68,28 @@ namespace QLTUYENDUNG.NVTieptan
                 {
                     MessageBox.Show("Invalid phone number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if(!Regex.Match(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").Success)
+                else if(!Regex.Match(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").Success)
                 {
                     MessageBox.Show("Invalid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+                else if(!Regex.Match(cccd, @"^\d{12}$").Success)
+                {
+                    MessageBox.Show("Invalid CCCD", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                { 
+                    string GioiTinh = isMale ? "Nam" : "Nữ";
+                    int rowCount = UngVienDAO.insertUngVien(ten, email, sdt, cccd, diaChi, GioiTinh);
+                    if(rowCount > 0)
+                    {
+                        MessageBox.Show("Insert successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert failed!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    Console.WriteLine(rowCount + " inserted to UNGVIEN");
+                }
             }
         }
     }

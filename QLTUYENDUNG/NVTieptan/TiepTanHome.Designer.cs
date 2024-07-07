@@ -204,7 +204,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(819, 524);
+            this.tabPage2.Size = new System.Drawing.Size(963, 540);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đăng kí doanh nghiệp";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -215,7 +215,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(819, 524);
+            this.tabPage3.Size = new System.Drawing.Size(963, 540);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Danh sách thành viên";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             this.membersDataGrid.RowHeadersVisible = false;
             this.membersDataGrid.RowHeadersWidth = 51;
             this.membersDataGrid.RowTemplate.Height = 24;
-            this.membersDataGrid.Size = new System.Drawing.Size(813, 518);
+            this.membersDataGrid.Size = new System.Drawing.Size(957, 534);
             this.membersDataGrid.TabIndex = 0;
             // 
             // tabPage4
@@ -251,7 +251,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(819, 524);
+            this.tabPage4.Size = new System.Drawing.Size(963, 540);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh sách doanh nghiệp";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             this.compsDataGrid.RowHeadersVisible = false;
             this.compsDataGrid.RowHeadersWidth = 51;
             this.compsDataGrid.RowTemplate.Height = 24;
-            this.compsDataGrid.Size = new System.Drawing.Size(813, 518);
+            this.compsDataGrid.Size = new System.Drawing.Size(957, 534);
             this.compsDataGrid.TabIndex = 0;
             // 
             // panel3
