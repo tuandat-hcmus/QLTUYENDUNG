@@ -1,6 +1,7 @@
 ﻿using QLTUYENDUNG.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace QLTUYENDUNG.DAO
             using (SqlConnection connection = new SqlConnection(AccountDAO.connectionString))
             {
                 try
-                {
+                    {
                     connection.Open();
                     string query = $"SELECT COUNT(*) FROM UNGVIEN WHERE {column} = @value";
                     SqlCommand command = new SqlCommand(query, connection);
@@ -56,13 +57,13 @@ namespace QLTUYENDUNG.DAO
                     int count = (int)command.ExecuteScalar();
                     connection.Close();
                     return count > 0;
-                }
+                    }
                 catch (Exception ex)
-                {
+                    {
                     Console.WriteLine("Error at checkExist" + ex.Message);
                     return false;
+                    }
                 }
-            }
         }
 
         public static int insertUngVien(string Ten, string Email, string DT, string CCCD, string DiaChi, string GioiTinh)
@@ -93,6 +94,37 @@ namespace QLTUYENDUNG.DAO
                     return 0;
                 }
             }
-        }
+
+            public static string getIdUngVienByCCCD(string cccd)
+            {
+                using (SqlConnection conn = new SqlConnection(AccountDAO.connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = $"SELECT IDUngVien FROM UNGVIEN WHERE CCCD = {cccd}";
+
+
+                        SqlCommand command = new SqlCommand(query, conn);
+
+                        object idResult = command.ExecuteScalar();
+
+                        if (idResult != null)
+                        {
+                            string id = idResult.ToString();
+                            return id;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error at UngVienDAO: getIdUngVienByCCCD(): " + ex.Message);
+                        return null;
+                    }
+                }
+            }
     }
 }

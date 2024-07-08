@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using QLTUYENDUNG.NVTieptan;
 using QLTUYENDUNG.NVPhongphaply;
 using QLTUYENDUNG.NVDangtuyen;
+using QLTUYENDUNG.NVTuyendung;
 using QLTUYENDUNG.Lanhdao;
 using QLTUYENDUNG.NVTuyendung;
 

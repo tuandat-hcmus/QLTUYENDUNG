@@ -11,7 +11,7 @@ namespace QLTUYENDUNG.DAO
 {
     internal class AccountDAO
     {
-        public static readonly string connectionString = "Server=DESKTOP-RQKHPSH;Database=QLTUYENDUNG;Integrated Security=True;";
+        public static readonly string connectionString = "Server=DRAGON\\SQLEXPRESS;Database=QLTUYENDUNG;Integrated Security=True;";
         private static AccountDAO instance = null;
 
         public static AccountDAO getInstance()

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QLTUYENDUNG.NVTuyendung
 {
-    public partial class TuyenDungHome : Form
+    public partial class ThemBangCap : Form
     {
-        public TuyenDungHome()
+        public ThemBangCap()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ThemHoSoTuyenDung themHoSoTuyenDung = new ThemHoSoTuyenDung();
-            themHoSoTuyenDung.ShowDialog();
         }
     }
 }
