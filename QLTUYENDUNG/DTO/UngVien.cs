@@ -44,5 +44,15 @@ namespace QLTUYENDUNG.DTO
         {
             return UngVienDAO.getAllUngVien();
         }
+
+        public static DataTable GetUngVienData(string doanhNghiepId)
+        {
+            return UngVienDAO.GetUngVienData(doanhNghiepId);
+        }
+
+        public static void UpdateTinhTrang(string idUngVien, string tinhTrang)
+        {
+            UngVienDAO.UpdateTinhTrang(idUngVien, tinhTrang);
+        }
     }
 }

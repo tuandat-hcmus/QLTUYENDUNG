@@ -51,5 +51,10 @@ namespace QLTUYENDUNG.DTO
         {
             return DoanhNghiepDAO.getAllDoanhNghiep();
         }
+
+        public static DataTable GetDoanhNghiepData(string doanhNghiepId)
+        {
+            return DoanhNghiepDAO.GetDoanhNghiepData(doanhNghiepId);
+        }
     }
 }
